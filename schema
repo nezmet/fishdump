@@ -1,0 +1,26 @@
+CREATE TABLE Fish (
+        Family NVARCHAR(20),
+        ScientificName NVARCHAR(40),
+        CommonName NVARCHAR(40),
+        Trophic NVARCHAR(2),
+        FishLength REAL,
+        FishCount INTEGER,
+        CONSTRAINT Fish_PK PRIMARY KEY (Family,ScientificName,CommonName,Trophic,FishLength,FishCount)
+);
+CREATE TABLE Location (
+        Region NVARCHAR(20),
+        SubRegion NVARCHAR(40),
+        StudyArea NVARCHAR(20),
+        BatchCode NVARCHAR(40),
+        Latitude REAL,
+        Longitude REAL,
+        Management NVARCHAR(10),
+        StructureType NVARCHAR(10),
+        CONSTRAINT Location_PK PRIMARY KEY (Region,SubRegion,StudyArea,BatchCode,Latitude,Longitude,Management,StructureType)
+);
+CREATE TABLE Date (
+        SurveyYear INTEGER,
+        SurveyDate NVARCHAR(10),
+        SurveyIndex INTEGER,
+        CONSTRAINT Date_PK PRIMARY KEY (SurveyYear,SurveyDate,SurveyIndex)
+);
