@@ -5,7 +5,7 @@ class Database():
         pass
 
     def connect(self):
-        self.con = sqlite3.connect("data/websearch.db")
+        self.con = sqlite3.connect("fish_dump.db")
         self.cur = self.con.cursor()
 
     def close(self):
